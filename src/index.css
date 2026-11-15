@@ -1,6 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap");
 :root {
   font-family: "DM Sans", sans-serif;
   color: #182b28;
@@ -401,6 +401,7 @@ button {
   margin-top: 26px;
   padding: 32px;
   background: white;
+  
   border: 1px solid #dce8de;
   border-radius: 15px;
 }
@@ -769,5 +770,150 @@ input:focus-visible {
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+}
+
+
+/* Language selector */
+
+.language-bar {
+  position: relative;
+  z-index: 10;
+  background: #102d27;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.language-bar-inner {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.language-label {
+  color: #bed4c5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.09);
+  padding: 4px;
+  border-radius: 9px;
+}
+
+.language-option {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  min-height: 35px;
+  padding: 7px 13px;
+  border-radius: 6px;
+  color: #d1e4d6;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-option.active {
+  background: #a7d9a9;
+  color: #153c2a;
+}
+
+.language-option:focus-visible {
+  outline: 2px solid #a7d9a9;
+  outline-offset: 2px;
+}
+
+/* Bengali typography */
+
+.training-page--bn {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.training-page--bn h1,
+.training-page--bn h2,
+.training-page--bn h3,
+.training-page--bn button,
+.training-page--bn p,
+.training-page--bn a,
+.training-page--bn span,
+.training-page--bn label {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.training-page--bn .training-hero h1 {
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.training-page--bn .training-section-header h2 {
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.training-page--bn .faq-question-text {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.training-page--bn .faq-answer p {
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.training-page--bn .faq-speaker {
+  font-size: 12px;
+}
+
+.training-page--bn .training-actions-header h2 {
+  letter-spacing: 0;
+}
+
+.training-page--bn .training-checklist label {
+  font-size: 16px;
+}
+
+.training-page--bn .math-item strong {
+  font-family: "DM Sans", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .language-bar-inner {
+    width: calc(100% - 32px);
+    padding: 10px 0;
+  }
+
+  .language-label {
+    font-size: 11px;
+  }
+
+  .language-option {
+    min-width: 65px;
+    padding: 7px 10px;
+  }
+
+  .training-page--bn .training-hero h1 {
+    font-size: 32px;
+  }
+
+  .training-page--bn .faq-question-text {
+    font-size: 15px;
+  }
+
+  .training-page--bn .faq-answer p {
+    font-size: 15px;
   }
 }
